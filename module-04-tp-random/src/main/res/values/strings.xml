@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">module-04-TP-Random</string>
+    <string name="erreur_borne">La borne inférieure doit l être</string>
+</resources>

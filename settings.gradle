@@ -16,3 +16,4 @@ rootProject.name = "MyFirstApp"
 include ':app'
 include ':module-01-interface'
 include ':module-04-findviewbyid'
+include ':module-04-tp-random'
