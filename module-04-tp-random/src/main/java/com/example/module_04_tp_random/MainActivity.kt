@@ -31,14 +31,11 @@ class MainActivity : AppCompatActivity() {
             var number =
                 Random.nextInt(from = inf.toInt(), until = sup.toInt())
             textViewNumber.text = number.toString()
-//            editTextBorneSup.clearFocus()
-//            editTextBorneInf.clearFocus()
+
             this.currentFocus?.let { view ->
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
                 imm?.hideSoftInputFromWindow(view.windowToken, 0)
             }
-
         }
-
     }
 }
