@@ -11,7 +11,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/interface-01" />
+            <option value="$PROJECT_DIR$/module-01-interface" />
+            <option value="$PROJECT_DIR$/module-04-findviewbyid" />
           </set>
         </option>
       </GradleProjectSettings>
