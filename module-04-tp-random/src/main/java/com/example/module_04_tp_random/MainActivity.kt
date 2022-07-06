@@ -19,19 +19,19 @@ class MainActivity : AppCompatActivity() {
         val textViewNumber = findViewById<TextView>(R.id.textViewNumber)
 
         buttonGenerate.setOnClickListener {
-            val editTextBorneInf =
+            var editTextBorneInf =
                 findViewById<EditText>(R.id.editTextNumberDecimalMin)
-            val editTextBorneSup =
+            var editTextBorneSup =
                 findViewById<EditText>(R.id.editTextNumberDecimalMax)
-            val inf = editTextBorneInf.text.toString()
-            val sup = editTextBorneSup.text.toString()
+            var inf = editTextBorneInf.text.toString()
+            var sup = editTextBorneSup.text.toString()
             if (inf >= sup) {
                 Snackbar.make(it, R.string.erreur_borne, Snackbar.LENGTH_SHORT).show()
-            }
-            var number =
-                Random.nextInt(from = inf.toInt(), until = sup.toInt())
-            textViewNumber.text = number.toString()
-
+            } else {
+                var number =
+                    Random.nextInt(from = inf.toInt(), until = sup.toInt())
+                textViewNumber.text = number.toString()
+                }
             this.currentFocus?.let { view ->
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
                 imm?.hideSoftInputFromWindow(view.windowToken, 0)
