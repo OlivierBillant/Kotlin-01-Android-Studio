@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonGenerate = findViewById<Button>(R.id.buttonGenerate)
-        val textViewNumber = findViewById<TextView>(R.id.textViewNumber)
-
+        var buttonGenerate = findViewById<Button>(R.id.buttonGenerate)
+        var textViewNumber = findViewById<TextView>(R.id.textViewNumber)
+//On aurait aussi pu utiliser lateinit pour initialiser plus tard les variables.
         buttonGenerate.setOnClickListener {
             var editTextBorneInf =
                 findViewById<EditText>(R.id.editTextNumberDecimalMin)
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 var number =
                     Random.nextInt(from = inf.toInt(), until = sup.toInt())
+//                Utiliser alternativement le toInt or null qui permet de tester sur null
                 textViewNumber.text = number.toString()
                 }
             this.currentFocus?.let { view ->

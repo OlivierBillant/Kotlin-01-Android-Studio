@@ -25,7 +25,7 @@
         android:layout_marginTop="75dp"
         android:ems="10"
         android:hint="Borne inférieure"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextViewRNG" />
@@ -37,7 +37,7 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Borne supérieure"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

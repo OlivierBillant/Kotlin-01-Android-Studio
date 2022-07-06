@@ -12,8 +12,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/module-01-interface" />
+            <option value="$PROJECT_DIR$/module-04-databinding" />
             <option value="$PROJECT_DIR$/module-04-findviewbyid" />
             <option value="$PROJECT_DIR$/module-04-tp-random" />
+            <option value="$PROJECT_DIR$/module-04-tp-vraifaux" />
           </set>
         </option>
       </GradleProjectSettings>
