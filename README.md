@@ -87,4 +87,28 @@ button.setOnClickListener {​
 }​
 ```
 
+## Guide Sage Args
+### Configuration
+Dans le gradle parent on ajoute les éléments suivants provenant de :  
+[https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args]
+
+``` kotlin
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        def nav_version = "2.5.0"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
+}
+```
+
+Puis dans le gradle du module on ajoute dans plugin : 
+```kotlin
+plugins {
+    id 'androidx.navigation.safeargs'
+}
+```
+
 
