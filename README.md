@@ -26,10 +26,9 @@ Dans le contrôleur correspondant, on peut **récupérer notre Binding** comme c
 ```kotlin
 public class ListArticlesFragment extends Fragment {
   FragmentListArticlesBinding flab;
+  
   @Override
-
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-  Bundle savedInstanceState) {
+  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     flab = FragmentListArticlesBinding.inflate(inflater);
     return flab.getRoot();
   }
@@ -41,6 +40,7 @@ ou pour **récupérer une instance** de DataBinding dans une Activité
 ```kotlin
 public class MainActivity extends AppCompatActivity {
   private ActivityMainBinding amb;
+  
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -81,8 +81,9 @@ Sans cette étape, la navigation ne pourra pas être afficher à l'écran car, p
 
 ```kotlin
 val button = view.findViewById<Button>(R.id.buttonToTarget)
+
 button.setOnClickListener {​
-Navigation.findNavController(view).navigate(R.id.action_buttonFragment_to_targetFragment)
+  Navigation.findNavController(view).navigate(R.id.action_buttonFragment_to_targetFragment)
 }​
 ```
 
