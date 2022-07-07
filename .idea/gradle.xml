@@ -17,8 +17,9 @@
             <option value="$PROJECT_DIR$/module-04-tp-random" />
             <option value="$PROJECT_DIR$/module-04-tp-vraifaux" />
             <option value="$PROJECT_DIR$/module-05-navigation" />
+            <option value="$PROJECT_DIR$/module-05-safe-args" />
+            <option value="$PROJECT_DIR$/module-05-tp-args-histoire" />
             <option value="$PROJECT_DIR$/module-05-tp-colorme" />
-            <option value="$PROJECT_DIR$/module-5-safe-args" />
           </set>
         </option>
       </GradleProjectSettings>
