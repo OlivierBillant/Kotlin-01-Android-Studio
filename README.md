@@ -68,7 +68,7 @@ Pour la **navigation API**, nous devons utiliser des fragments en tant que page.
 
 3. Dans ce fichier ajoutez vos fragment un à un avec le **bouton Fragment+**
 
-4.Créer des "actions" (flèches) entre les "destinations" (vos fragments)  
+4. Créer des "actions" (flèches) entre les "destinations" (vos fragments)  
 juste en glissant déposant depuis le bord des fragments avec la petite bille bleue.
 
 5. Afficher votre navigation en ajoutant **la vue (container) NavHostFragment** dans les fichier activity_main.xml.  
