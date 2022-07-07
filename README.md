@@ -56,14 +56,14 @@ Navigation Controller : Contrôleur permettant de se déplacer entre les différ
 
 Pour la navigation API, nous devons utiliser des fragments en tant que page.  
 1. Pour créer un fragment :
- - Clic droit sur votre package dans java : clic droit -> New -> Fragment -> Fragment Blank
- - Nommez votre fragment
- - Répétez cette opération pour le nombre de pages souhaitées.
+   - Clic droit sur votre package dans java : clic droit -> New -> Fragment -> Fragment Blank
+   - Nommez votre fragment
+   - Répétez cette opération pour le nombre de pages souhaitées.
 
 2. Créer un Navigation Graph.
- - Clic droit sur res -> New -> Android Resource File
- - Sélectionnez le type de ressource "navigation"
- - Nommez votre fichier
+   - Clic droit sur res -> New -> Android Resource File
+   - Sélectionnez le type de ressource "navigation"
+   - Nommez votre fichier
 
 3. Dans ce fichier ajoutez vos fragment un à un avec
 
