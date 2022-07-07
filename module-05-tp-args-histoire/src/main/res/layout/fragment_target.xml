@@ -12,11 +12,11 @@
         android:id="@+id/textViewResult"
         android:layout_width="249dp"
         android:layout_height="503dp"
-        android:text="@string/hello_blank_fragment"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Salut Max !" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
