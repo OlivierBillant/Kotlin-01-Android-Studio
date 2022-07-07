@@ -112,4 +112,45 @@ plugins {
 }
 ```
 
+Après avoir crée un binding avec les donénes à récupérer  
+On prépare notre binding :  
+
+```kotlin
+class HomeFragment : Fragment() {
+
+    lateinit var binding: FragmentHomeBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+```
+Puis on crée un objet à partir de éléments bindés ad hoc :  
+```kotlin
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.button.setOnClickListener {
+            val histoire = Histoire(
+                binding.editTextPrenom.text.toString(),
+                binding.editTextLieu.text.toString(),
+            )
+```
+On construit l'action de changement de page à laquelle on passe l'argument (objet) nécessaire :
+```kotlin
+            var action = HomeFragmentDirections.actionHomeFragmentToTargetFragment(histoire)
+            Navigation.findNavController(view)
+                .navigate(action)
+        }
+    }
+```
+
+Sur la page cible on pourra alors récupérer le bundle d'argument passés et en extraire les objets :  
+```kotlin
+        val targetFragmentArgs = arguments?.let { TargetFragmentArgs.fromBundle(it) }
+```
+}
 
