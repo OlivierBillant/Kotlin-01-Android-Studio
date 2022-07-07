@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentBlanc">
+
+    <fragment
+        android:id="@+id/fragmentBlanc"
+        android:name="com.example.module_05_tp_colorme.FragmentBlanc"
+        android:label="fragment_blanc"
+        tools:layout="@layout/fragment_blanc" >
+        <action
+            android:id="@+id/action_fragmentBlanc_to_fragmentRose"
+            app:destination="@id/fragmentRose" />
+        <action
+            android:id="@+id/action_fragmentBlanc_to_fragmentRouge"
+            app:destination="@id/fragmentRouge" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRose"
+        android:name="com.example.module_05_tp_colorme.FragmentRose"
+        android:label="fragment_rose"
+        tools:layout="@layout/fragment_rose" >
+        <action
+            android:id="@+id/action_fragmentRose_to_fragmentJaune"
+            app:destination="@id/fragmentJaune" />
+        <action
+            android:id="@+id/action_fragmentRose_to_fragmentVert"
+            app:destination="@id/fragmentVert" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRouge"
+        android:name="com.example.module_05_tp_colorme.FragmentRouge"
+        android:label="fragment_rouge"
+        tools:layout="@layout/fragment_rouge" >
+        <action
+            android:id="@+id/action_fragmentRouge_to_fragmentOrange"
+            app:destination="@id/fragmentOrange" />
+        <action
+            android:id="@+id/action_fragmentRouge_to_fragmentBleu"
+            app:destination="@id/fragmentBleu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOrange"
+        android:name="com.example.module_05_tp_colorme.FragmentOrange"
+        android:label="fragment_orange"
+        tools:layout="@layout/fragment_orange" />
+    <fragment
+        android:id="@+id/fragmentBleu"
+        android:name="com.example.module_05_tp_colorme.FragmentBleu"
+        android:label="fragment_bleu"
+        tools:layout="@layout/fragment_bleu" />
+    <fragment
+        android:id="@+id/fragmentJaune"
+        android:name="com.example.module_05_tp_colorme.FragmentJaune"
+        android:label="fragment_jaune"
+        tools:layout="@layout/fragment_jaune" />
+    <fragment
+        android:id="@+id/fragmentVert"
+        android:name="com.example.module_05_tp_colorme.FragmentVert"
+        android:label="fragment_vert"
+        tools:layout="@layout/fragment_vert" />
+</navigation>
