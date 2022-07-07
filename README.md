@@ -108,6 +108,7 @@ Puis dans le gradle du module on ajoute dans plugin :
 ```kotlin
 plugins {
     id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
 }
 ```
 
