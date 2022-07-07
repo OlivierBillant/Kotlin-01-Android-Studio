@@ -14,7 +14,7 @@ Il faut bien comprendre que la classe créée pour le databinding d'un layout po
 J'ai une activité qui s'appelle MainActivity, qui possède un layout appelé "activity_main.xml" fichier databinding => ActivityMainBinding
 
 - Dans le contrôleur correspondant, on peut récupérer notre Binding comme ci-dessous dans un Fragment :
-
+``` kotlin
 > public class ListArticlesFragment extends Fragment {
 FragmentListArticlesBinding flab;
 @Override
@@ -24,7 +24,7 @@ flab = FragmentListArticlesBinding.inflate(inflater);
 return flab.getRoot();
 }
 }
-
+```
 ou pour récupérer une instance de DataBinding dans une Activité
 
 > public class MainActivity extends AppCompatActivity {
