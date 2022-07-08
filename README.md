@@ -163,6 +163,16 @@ Composition d'un intent :
 - Extras : donénes à transporter
 - Flag qui indique comment démarrer une activité.
 
+
+``` kotlin
+ val buttonMain = findViewById<Button>(R.id.buttonMain)
+        buttonMain.setOnClickListener {
+            val intentToTarget = Intent(this, TargetActivity::class.java)
+            intentToTarget.putExtra("age", 34)
+            startActivity(intentToTarget)
+        }
+```
+
 ### Les extras
 Fonctionnent en clef valeur.
 
