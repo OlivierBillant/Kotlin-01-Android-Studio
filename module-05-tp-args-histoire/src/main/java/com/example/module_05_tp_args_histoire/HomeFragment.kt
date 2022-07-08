@@ -32,7 +32,6 @@ class HomeFragment : Fragment() {
             var action = HomeFragmentDirections.actionHomeFragmentToTargetFragment(histoire)
             Navigation.findNavController(view)
                 .navigate(action)
-
         }
     }
 }
