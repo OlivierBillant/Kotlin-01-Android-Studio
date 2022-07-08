@@ -3,11 +3,14 @@ package com.example.module_06_navigation_intent
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.PermissionChecker.PERMISSION_GRANTED
+
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 22
             )
         }
+        Log.i(TAG, "onCreate: ")
     }
 
     override fun onRequestPermissionsResult(
@@ -55,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             val intentToSms = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:06123456768"))
             intentToSms.putExtra("sms_body", "Salut Max !")
             startActivity(intentToSms)
+            Log.i(TAG, "onRequestPermissionsResult: ")
         }
     }
 
