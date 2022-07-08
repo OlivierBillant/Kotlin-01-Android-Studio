@@ -154,3 +154,15 @@ Sur la page cible on pourra alors récupérer le bundle d'argument passés et en
 ```
 }
 
+## Navigation externe
+Composition d'un intent : 
+- nom de l'action
+- URI référencant les données
+- nom du composant ) démarrer
+- catégories du type de composant
+- Extras : donénes à transporter
+- Flag qui indique comment démarrer une activité.
+
+### Les extras
+Fonctionnent en clef valeur.
+
