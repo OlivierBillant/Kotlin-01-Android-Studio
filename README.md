@@ -208,6 +208,11 @@ override fun onRequestPermissionsResult(
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+         if (requestCode == 22 && grantResults[0] == PERMISSION_GRANTED) {
+            val intentToSms = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:06123456768"))
+            intentToSms.putExtra("sms_body", "Salut Max !")
+            startActivity(intentToSms)
+        }
     }
 ```
 
