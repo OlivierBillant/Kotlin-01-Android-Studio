@@ -215,5 +215,3 @@ override fun onRequestPermissionsResult(
         }
     }
 ```
-
-
