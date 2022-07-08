@@ -176,3 +176,39 @@ Composition d'un intent :
 ### Les extras
 Fonctionnent en clef valeur.
 
+### Les permissions
+Sont séparées entre permissions : 
+- safe
+- dangereuses/explicites (caméra, micro, call, location, userdata, contact, contact)  
+Elles demanderont la validation utilisateur. On ajoutera la permission dans le **naifeste, avant la balise application**
+
+``` kotlin
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+```
+
+Pour demander la permission :
+La méthode ActivityCompact prendra en paramètre l'activité en cours, puis une liste de permission et enfin le groupe de permission (le request code)
+``` kotlin
+ //   Permission dangereuse    
+        val buttonSms = findViewById<Button>(R.id.buttonSMS)
+        buttonSms.setOnClickListener {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(android.Manifest.permission.SEND_SMS),
+                22
+            )
+        }
+```
+La gestion des l'autorisation sera faite en dehors du OnCreate et on distinguera les autorisation par les requestCode.
+
+``` kotlin
+override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+```
+
+
