@@ -10,6 +10,7 @@ import com.example.module_08_tp_livedata.databinding.ActivityMainBinding
 
 lateinit var binding: ActivityMainBinding
 lateinit var vm: DiceViewModel
+lateinit var de: Dice
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,21 +49,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-
         vm.roll(
-            when (p0?.getId()) {
-                R.id.button2
-                -> 2
-                R.id.button10
-                -> 10
-                R.id.button20
-                -> 20
-                R.id.button6
-                -> 6
-                R.id.button12
-                -> 12
-                R.id.button24
-                -> 24
+            when (p0?.id) {
+                R.id.button2 -> binding.button2.text.toString().toInt()
+                R.id.button10 -> binding.button10.text.toString().toInt()
+                R.id.button20 -> binding.button20.text.toString().toInt()
+                R.id.button6 -> binding.button6.text.toString().toInt()
+                R.id.button12 -> binding.button12.text.toString().toInt()
+                R.id.button24 -> binding.button24.text.toString().toInt()
                 else -> return
             }
         )

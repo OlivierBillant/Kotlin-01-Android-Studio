@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/actionbar" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/module-01-interface" />
             <option value="$PROJECT_DIR$/module-04-databinding" />
@@ -24,6 +25,7 @@
             <option value="$PROJECT_DIR$/module-07-lifecycle" />
             <option value="$PROJECT_DIR$/module-08-livedate" />
             <option value="$PROJECT_DIR$/module-08-tp-livedata" />
+            <option value="$PROJECT_DIR$/module-08-tp-recap" />
             <option value="$PROJECT_DIR$/module-08-tp-viewmodel-de" />
             <option value="$PROJECT_DIR$/module-08-viewmodel-lifecycle" />
           </set>
