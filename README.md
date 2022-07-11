@@ -215,3 +215,14 @@ override fun onRequestPermissionsResult(
         }
     }
 ```
+
+### ViewModel avec LiveDate
+Le controller est associé au ViewModel mais il restera maintenu même lorsqu'un fragment est rechargé suite à un changement de configuration.  
+On ne référence pas les vues dans le ViewModel, uniquement les donénes.  
+Dans la ViewModel on pourra injecter la DAO et avoir ainsi accès à la db.  
+ 1. Création d'un VM
+Sera crée dans un fragment en même temps que le binding: 
+```kotlin
+viewModel = ViewModelProvider(this).get(ViewModel-class-souhaitée)
+```
+ 2.  
