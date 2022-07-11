@@ -22,6 +22,7 @@
             <option value="$PROJECT_DIR$/module-05-tp-colorme" />
             <option value="$PROJECT_DIR$/module-06-navigation-intent" />
             <option value="$PROJECT_DIR$/module-07-lifecycle" />
+            <option value="$PROJECT_DIR$/module-08-viewmodel-lifecycle" />
           </set>
         </option>
       </GradleProjectSettings>
