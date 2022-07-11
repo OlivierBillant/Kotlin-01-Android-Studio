@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Histoire(val prenom : String, val genre : String, val lieu : String): Parcelable
+class Histoire(var prenom : String, var genre : String, var lieu : String): Parcelable
