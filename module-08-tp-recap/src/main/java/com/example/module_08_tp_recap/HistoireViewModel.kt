@@ -9,7 +9,13 @@ class HistoireViewModel : ViewModel() {
     init {
         histoire.value = Histoire("Olivier", "Homme", "Grotte")
     }
-    fun editPrenom(nouvelleHistoire: Histoire){
-        histoire.value = nouvelleHistoire
+    fun editPrenom(nouveauPrenom: String):String{
+        val oldHistoire = histoire?.value
+        oldHistoire?.prenom = nouveauPrenom
+        histoire.value= oldHistoire
+        return histoire.value?.prenom.toString()
+    }
+    fun editHistoire(histoire: Histoire){
+        this.histoire?.value = histoire
     }
 }

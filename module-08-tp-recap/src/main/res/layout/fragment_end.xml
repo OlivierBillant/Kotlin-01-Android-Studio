@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+<variable
+    name="histoire"
+    type="com.example.module_08_tp_recap.Histoire" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +21,7 @@
             android:layout_height="459dp"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:hint="Histoire"
+            android:text="@{`Il était une fois un être nommé  `+histoire.prenom + ` qui était un `+ histoire.genre +`  et  vivait dans un(e) `+ histoire.lieu}"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/buttonEnd"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,5 +53,6 @@
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/buttonEnd" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
