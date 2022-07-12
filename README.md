@@ -220,9 +220,28 @@ override fun onRequestPermissionsResult(
 Le controller est associé au ViewModel mais il restera maintenu même lorsqu'un fragment est rechargé suite à un changement de configuration.  
 On ne référence pas les vues dans le ViewModel, uniquement les donénes.  
 Dans la ViewModel on pourra injecter la DAO et avoir ainsi accès à la db.  
- 1. Création d'un VM
+Création d'un VM
 Sera crée dans un fragment en même temps que le binding: 
 ```kotlin
 viewModel = ViewModelProvider(this).get(ViewModel-class-souhaitée)
 ```
- 2.  
+### Room, db et singleton
+1. Modification du build.gradle du module :  
+[https://developer.android.com/jetpack/androidx/releases/room]
+``` kotlin
+dependencies {
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+}
+```
