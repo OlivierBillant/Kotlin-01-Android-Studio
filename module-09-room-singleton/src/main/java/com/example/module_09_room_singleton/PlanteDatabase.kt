@@ -15,16 +15,18 @@ abstract class PlanteDatabase : RoomDatabase() {
 
         fun getInstance(context: Context): PlanteDatabase {
             synchronized(this) {
-                var instace = INSTANCE
-                if (instace == null) {
-                    instace = Room.databaseBuilder(
+                var instance = INSTANCE
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
                         context,
                         PlanteDatabase::class.java,
                         "Plantation"
                     ).fallbackToDestructiveMigration().build()
-                    INSTANCE = instace
+//                    Si jamais je change de schéma, on change de version de database (migration)
+//                    On détruira la base pour la récréer
+                    INSTANCE = instance
                 }
-                return instace
+                return instance
             }
         }
     }
