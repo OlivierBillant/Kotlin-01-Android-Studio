@@ -12,7 +12,8 @@ class HistoireViewModel : ViewModel() {
     fun editPrenom(nouveauPrenom: String):String{
         val oldHistoire = histoire?.value
         oldHistoire?.prenom = nouveauPrenom
-        histoire.value= oldHistoire
+//        histoire.value= oldHistoire
+        oldHistoire?.let { histoire.value = it}
         return histoire.value?.prenom.toString()
     }
     fun editHistoire(histoire: Histoire){

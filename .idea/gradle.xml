@@ -28,6 +28,7 @@
             <option value="$PROJECT_DIR$/module-08-tp-recap" />
             <option value="$PROJECT_DIR$/module-08-tp-viewmodel-de" />
             <option value="$PROJECT_DIR$/module-08-viewmodel-lifecycle" />
+            <option value="$PROJECT_DIR$/module-09-room-singleton" />
           </set>
         </option>
       </GradleProjectSettings>
