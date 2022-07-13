@@ -11,8 +11,11 @@ interface PlanteDao {
     @Query("SELECT * FROM Plante")
     fun getAll() : LiveData<List<Plante>>
 
-     @Query("SELECT * FROM Plante WHERE perenne = :perenne")
+    @Query("SELECT * FROM Plante WHERE perenne = :perenne")
     fun getAllPlantesByPerennite(perenne: Boolean) : List<Plante>
+
+    @Query("SELECT * FROM Plante WHERE id = :id")
+    fun getPlanteById(id: Int) : Plante
 
     @Update
     fun update(plante: Plante)

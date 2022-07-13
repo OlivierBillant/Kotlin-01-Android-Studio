@@ -17,10 +17,11 @@ class MainActivity : AppCompatActivity() {
         )
             .get(PlanteViewModel::class.java)
         val button = findViewById<Button>(R.id.button)
-        vm.listePlantes.observe(this, Observer {
-            Toast.makeText(this,it.toString(), Toast.LENGTH_SHORT).show()
-
-        })
+        button.setOnClickListener {
+            vm.listePlantes.observe(this, Observer {
+                Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+            })
+        }
 //        thread {
 ////            On déporte les actions en db dans un autre thread
 //            PlanteDatabase.getInstance(this).planteDao().insert(
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 //            PlanteDatabase.getInstance(this).planteDao().insert(
 //                Plante(0, "Rhubarbe", "Fruiteuse", true),
 //            )
+//        var Plante1 = PlanteDatabase.getInstance(this).planteDao().getPlanteById(1)
+//        PlanteDatabase.getInstance(this).planteDao().delete(Plante1)
 //        }
     }
 }
